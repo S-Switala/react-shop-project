@@ -1,0 +1,97 @@
+@media (min-width: 1201px) {
+	.wrapper {
+		max-width: 1200px;
+		padding: 0 35px;
+	}
+
+	.shop-name {
+		padding: 15px 10px;
+		font-size: 4.4rem;
+	}
+
+	.cart-button {
+		padding: 18px 36px;
+
+		.fa-shopping-cart {
+			font-size: 1.8rem;
+		}
+	}
+
+	.cart-count {
+		padding: 5px 11px;
+		font-size: 1.6rem;
+	}
+
+	.cart {
+		top: 80px;
+		width: 500px;
+		min-height: 600px;
+		max-height: 80vh;
+		font-size: 2.4rem;
+
+		.cart-title {
+			font-size: 3.2rem;
+		}
+
+		.total-price {
+			font-size: 2.6rem;
+			padding-right: 20px;
+			text-align: right;
+		}
+	}
+
+	.cart-item {
+		font-size: 2.4rem;
+
+		.itemInfo-box {
+			.material-symbols-outlined {
+				font-size: 3.6rem;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.product-list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.product {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 20px 0 30px;
+		width: 350px;
+		font-size: 2.4rem;
+    
+		.product-btn {
+			position: relative;
+			font-size: 2rem;
+			overflow: hidden;
+			z-index: 2;
+
+			p {
+				position: relative;
+				z-index: 3;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: -30px;
+				left: -60px;
+				rotate: 45deg;
+				width: 35px;
+				height: 100px;
+				background: $accent-glass;
+				z-index: 1;
+				transition: left 1s ease;
+			}
+
+			&:hover::after {
+				left: 220px;
+			}
+		}
+	}
+}
